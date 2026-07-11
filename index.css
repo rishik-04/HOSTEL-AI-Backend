@@ -1,0 +1,29 @@
+import { motion } from "framer-motion";
+
+export default function StatisticsCard({ label, value, icon: Icon, tone = "primary", trend }) {
+  const tones = {
+    primary: "bg-primary-50 text-primary-600 dark:bg-primary-500/10 dark:text-primary-400",
+    accent: "bg-accent-50 text-accent-600 dark:bg-accent-500/10 dark:text-accent-400",
+    emerald: "bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-400",
+    rose: "bg-rose-50 text-rose-600 dark:bg-rose-500/10 dark:text-rose-400",
+  };
+
+  return (
+    <motion.div
+      className="card flex items-center gap-4 p-5"
+      whileHover={{ y: -3 }}
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+    >
+      <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${tones[tone]}`}>
+        <Icon size={22} />
+      </div>
+      <div className="min-w-0">
+        <p className="text-sm text-slate-500">{label}</p>
+        <div className="flex items-baseline gap-2">
+          <p className="text-2xl font-bold">{value}</p>
+          {trend && <span className="text-xs font-semibold text-emerald-500">{trend}</span>}
+        </div>
+      </div>
+    </motion.div>
+  );
+}

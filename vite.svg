@@ -1,0 +1,24 @@
+import { FiMail, FiPhone, FiHome, FiHash } from "react-icons/fi";
+
+export default function ProfileCard({ user }) {
+  if (!user) return null;
+  return (
+    <div className="card p-5">
+      <div className="flex items-center gap-4">
+        <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-primary-500 to-primary-700 text-lg font-bold text-white">
+          {user.name?.split(" ").map((n) => n[0]).join("").slice(0, 2)}
+        </div>
+        <div>
+          <p className="font-semibold">{user.name}</p>
+          <p className="text-xs font-medium text-primary-600">{user.role}</p>
+        </div>
+      </div>
+      <div className="mt-4 space-y-2 text-sm text-slate-500">
+        <p className="flex items-center gap-2"><FiMail size={14} /> {user.email}</p>
+        <p className="flex items-center gap-2"><FiPhone size={14} /> {user.phone}</p>
+        <p className="flex items-center gap-2"><FiHome size={14} /> {user.hostel}</p>
+        {user.room !== "-" && <p className="flex items-center gap-2"><FiHash size={14} /> Room {user.room}</p>}
+      </div>
+    </div>
+  );
+}
