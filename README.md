@@ -1,16 +1,32 @@
-# React + Vite
+# 🏠 HOSTEL AI
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+AI-Powered Hostel Grievance Redressal System
 
-Currently, two official plugins are available:
+## 📖 Project Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+HOSTEL AI is an AI-powered grievance management system designed for hostels and campuses. Students can raise complaints regarding maintenance, food, Wi-Fi, security, cleanliness, and other issues. The system automatically analyzes complaints using AI, detects duplicate complaints, assigns priority levels, and forwards them to the appropriate authorities.
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Student Login & Registration
+- Owner/Admin Login
+- Raise Hostel Complaints
+- AI Complaint Analysis
+- Duplicate Complaint Detection
+- Complaint Priority Prediction
+- Complaint Tracking
+- Dashboard
+- Feedback System
+- Secure Authentication
 
-## Expanding the Oxlint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+| Technology | Usage |
+|------------|-------|
+| React + Vite | Frontend |
+| Express.js | Backend |
+| Node.js | Runtime |
+| MongoDB | Database |
+| FastAPI | AI Service |
+| Groq API | AI Model |
+| JWT | Authentication |
